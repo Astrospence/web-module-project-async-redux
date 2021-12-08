@@ -1,18 +1,7 @@
 import { FETCH_POKEMON_START, FETCH_POKEMON_SUCCESS, FETCH_POKEMON_FAIL } from "../actions";
 
 const initialState = {
-    name: '',
-    type: '',
-    abilities: '',
-    baseStats: {
-        hp: '',
-        attack: '',
-        defense: '',
-        spAttack: '',
-        spDefense: '',
-        speed: '',
-        total: ''
-    },
+    pokemon: [],
     isFetching: false,
     error: ''
 }
@@ -28,7 +17,8 @@ const reducer = (state = initialState, action) => {
             console.log(action.payload);
             return {
                 ...state,
-                isFetching: false
+                isFetching: false,
+                pokemon: action.payload
             }
         case FETCH_POKEMON_FAIL:
             return {

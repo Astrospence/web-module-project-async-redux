@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Pokemon = () => {
+const Pokemon = (props) => {
+    const { name } = props;
+    
+
     return (
         <div>
-            Pokemon
+            {name}
         </div>
     )
 }
