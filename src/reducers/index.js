@@ -1,4 +1,4 @@
-import { FETCH_POKEMON_START, FETCH_POKEMON_SUCCESS, FETCH_POKEMON_FAIL } from "../actions";
+import { FETCH_POKEMON_START, FETCH_POKEMON_SUCCESS, FETCH_POKEMON_FAIL, } from "../actions";
 
 const initialState = {
     pokemon: [],
@@ -14,7 +14,6 @@ const reducer = (state = initialState, action) => {
                 isFetching: true
             }
         case FETCH_POKEMON_SUCCESS:
-            console.log(action.payload);
             return {
                 ...state,
                 isFetching: false,

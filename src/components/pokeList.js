@@ -10,11 +10,13 @@ const PokeList = (props) => {
         getPokemon();
     }, [])
 
+    console.log('rendering PokeList');
+
     return (
         <div>
             <div>
                 {pokemon.map(index => {
-                    return <Pokemon key={index.url} name={index.name} />
+                    return <Pokemon key={index.url} name={index.name} pokedex={index.url} />
                 })}
             </div>
         </div>
