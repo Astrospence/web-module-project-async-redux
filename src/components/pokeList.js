@@ -10,8 +10,6 @@ const PokeList = (props) => {
         getPokemon();
     }, [])
 
-    console.log('rendering PokeList');
-
     return (
         <div>
             <div>
