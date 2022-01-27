@@ -13,6 +13,7 @@ const PokeList = (props) => {
     return (
         <div>
             <div>
+                <h1 className='title'>Pokemon</h1>
                 {pokemon.map(index => {
                     return <Pokemon key={index.url} name={index.name} pokedex={index.url} />
                 })}

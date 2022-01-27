@@ -20,9 +20,9 @@ const Pokemon = (props) => {
     }, []);
 
     return (
-        <div>
-            {name}
-            {info === [] ? <p>Loading...</p> : <img width="200" src={pics} alt={`picture of ${name}`} />}
+        <div className='container'>
+            {info === [] ? <p>Loading...</p> : <img className='img' src={pics} alt={`picture of ${name}`} />}
+            <h2 className='name'>{name}</h2>
         </div>
     )
 }
